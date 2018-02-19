@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="project01.csc214.project01.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Game Trio"
+                android:textAlignment="center"
+                android:textSize="40sp"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/enter_name_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter each player's name:"
+                android:textSize="24sp"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"/>
+            <LinearLayout
+                android:id="@+id/edit_text_player_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/enter_name_textview"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/edit_text_player_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Player 1"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"/>
+
+                <EditText
+                    android:id="@+id/edit_text_player_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Player 2"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+            <TextView
+                android:id="@+id/pick_a_game_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Pick a game!"
+                android:textSize="24sp"
+                android:textAlignment="center"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/pick_a_game_textview">
+                <Button
+                    android:id="@+id/hot_or_cold_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="20dp"
+                    android:text="Hot or Cold"/>
+                <Button
+                    android:id="@+id/hangman_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="20dp"
+                    android:text="Hangman"/>
+                <Button
+                    android:id="@+id/connect_4_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="20dp"
+                    android:text="Connect 4"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/score_board_layout_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/score_player1_main"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Player1: 0"
+                android:textSize="24sp">
+            </TextView>
+            <TextView
+                android:id="@+id/score_player2_main"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Player2: 0"
+                android:textSize="24sp">
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

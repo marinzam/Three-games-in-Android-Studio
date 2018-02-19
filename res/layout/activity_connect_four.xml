@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_connect_four"
+    tools:context="project01.csc214.project01.ConnectFourActivity">
+
+    <Button
+        android:id="@+id/connect_quit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QUIT"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:id="@+id/connect_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="Connect Four"
+            android:textAlignment="center"
+            android:textSize="30sp"/>
+        <TextView
+            android:id="@+id/player_instructions_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Player1, pick a circle:"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:padding="15dp"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <GridView
+                android:id="@+id/gridview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:columnWidth="20dp"
+                android:gravity="center"
+                android:horizontalSpacing="8dp"
+                android:numColumns="5"
+                android:verticalSpacing="8dp"/>
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/score_board_layout_connect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/connect_linear_layout">
+        <TextView
+            android:id="@+id/score_player1_connect"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="Player1: 0"
+            android:textSize="24sp">
+        </TextView>
+        <TextView
+            android:id="@+id/score_player2_connect"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="Player2: 0"
+            android:textSize="24sp">
+        </TextView>
+    </LinearLayout>
+</RelativeLayout>
